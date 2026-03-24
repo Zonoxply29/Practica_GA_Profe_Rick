@@ -1,0 +1,35 @@
+@use './abstract/variables' as *;
+
+.cards {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 50px;
+    margin-block: 25px;
+    .card {
+        outline: 1pt solid #cccc;
+        flex-basis: 400px;
+        padding: $gap $gap $gap-double;
+        border-radius: $border-radius;
+        border-bottom: 4px solid var(--clr-highlight);
+        box-shadow: 2px 2px 0 1px var(--clr-gray);
+        &-img {
+            margin-bottom: $gap;
+            width: 100%;
+            aspect-ratio: 2/1;
+            object-fit: cover;
+            border-radius: $border-radius;
+            box-shadow: 2px 2px 0 1px var(--clr-gray);
+        }
+        &-title {
+            margin-bottom: $gap-half;
+            font-family: $font-title;
+            font-size: $fs-3;
+            font-weight: 700;
+        }
+        &-text {
+            font-size: $fs-6;
+        }
+    }
+}

@@ -1,0 +1,92 @@
+@use './abstract/variables' as *;
+
+.editor {
+    display: grid;
+    grid-template-rows: 50px 1fr;
+    width: 100%;
+    border-radius: $border-radius;
+    overflow: clip; // for border-radius
+    scroll-margin-top: $scroll-margin-top;
+	scrollbar-width: thin;
+    scrollbar-color: var(--clr-primary) var(--clr-secondary-dark); // thumb | track
+    &_tabset {
+        list-style-type: none;
+        display: flex;
+        overflow-y: clip;
+        overflow-x: auto;
+        background: var(--clr-secondary-darkest);
+        scrollbar-width: none;
+        &.dragging {
+            user-select: none !important;
+            li { 
+                cursor: grabbing !important;
+            }
+        }
+        i {
+            color: var(--clr-white);
+            &.fa-html5 {
+                color: #E44D26;
+            }
+            &.fa-css {
+                color: rebeccapurple; // https://www.reddit.com/r/webdev/comments/1de8i26/about_ten_years_ago_the_hex_color_rebeccapurple/
+            }
+            &.fa-js {
+                color: #f7df1e;
+            }
+            &.fa-sass {
+                color: #CC6699;
+            }
+            &.fa-bootstrap {
+                color: #7952B3;
+            }
+            &.fa-vuejs {
+                color: #42B883;
+            }
+            &.fa-laravel {
+                color: #FF4529;
+            }
+            &.fa-git {
+                color: #F05032;
+            }
+            &.fa-code {
+                color: #E6DB74;
+            }
+        }
+        li {
+            flex-shrink: 0;
+            width: fit-content;
+            cursor: pointer;
+            > span {
+                display: block;
+                padding: 15px;
+                span {
+                    margin-left: 10px;
+                    color: var(--clr-white);
+                }
+            }
+            &[aria-selected="true"] {
+                position: relative;
+                background: var(--clr-secondary-dark);
+                &::after {
+                    content: '';
+                    position: absolute;
+                    bottom: 0;
+                    display: block;
+                    width: 100%;
+                    height: 2px;
+                    background: var(--clr-accent);
+                }
+            }
+        }
+    }
+    &_display {
+        width: 100%;
+        height: 400px;
+        background: var(--clr-secondary-dark);
+        overflow-x: auto;
+        scroll-behavior: contain;
+    }
+    &_window {
+        position: relative;
+    }
+}

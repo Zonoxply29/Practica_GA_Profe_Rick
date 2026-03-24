@@ -1,0 +1,62 @@
+@use '../abstract/variables' as *;
+
+:root {
+    // Static. These colors don't vary depending on the color scheme.
+    --clr-white: #F5F5F5;
+    --clr-gray-light: #F8F8F8;
+    --clr-gray: #DDD;
+    --clr-gray-dark: #444;
+    --clr-black: #2A2A2A;
+    --clr-primary: #FFF4E3;
+
+    --clr-secondary: #014E6B;
+    --clr-secondary-dark: #00222f;
+    --clr-secondary-darkest: #001118;    
+
+    --clr-accent: #C43122;
+    --clr-highlight: #F84230;
+    --clr-highlighter-yellow: #ffbf27;
+    //--clr-error: #C30E0E;   
+}
+.theme-light,
+.theme-dark {
+    transition:
+        color $transition-time,
+        color-scheme $transition-time;
+}
+.theme-light {
+    color-scheme: light;
+
+    // Component specific
+    --clr-logo: var(--clr-black);
+    --clr-text: var(--clr-black);
+    --clr-bg: #FFFCF6;
+    --clr-bg-header: var(--clr-primary);
+    --clr-bg-footer: linear-gradient(90deg, var(--clr-secondary) 0, var(--clr-secondary-dark) 70%);
+    --clr-bg-accordrion: var(--clr-primary);
+    --clr-bg-accordrion-active: var(--clr-primary);
+    --clr-bg-review-card: var(--clr-white);
+    --clr-sliding-logos: var(--clr-secondary);
+    --clr-review-stars: var(--clr-secondary);
+
+    .theme_icon {--fa:'\f186';}
+}
+.theme-dark {
+    color-scheme: dark;
+
+    // Component specific
+    --clr-logo: var(--clr-white);
+    --clr-text: var(--clr-white);
+    --clr-bg: var(--clr-secondary-dark);
+    --clr-bg-header: var(--clr-secondary-darkest);
+    --clr-bg-footer: linear-gradient(90deg, var(--clr-secondary-dark) 0, var(--clr-secondary-darkest) 70%);
+    --clr-bg-accordrion: var(--clr-secondary-dark);
+    --clr-bg-accordrion-active: var(--clr-secondary-darkest);
+    --clr-bg-review-card: var(--clr-secondary-darkest);
+    --clr-sliding-logos: var(--clr-white);
+    --clr-review-stars: var(--clr-white);
+
+    .theme_icon { --fa: '\f185';}
+    .innerHeader .logo{filter:invert(1)}
+    .editor {outline:1pt solid var(--clr-white)}
+}

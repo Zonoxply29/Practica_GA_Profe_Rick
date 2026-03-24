@@ -1,0 +1,28 @@
+{
+    "name": "proferick.com",
+    "version": "1.0.0",
+    "description": "",
+    "main": "index.js",
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/Salegomx/proferick.com.git"
+    },
+    "author": "@salegomx | sergiogomez.mx",
+    "license": "ISC",
+    "bugs": {
+        "url": "https://github.com/Salegomx/proferick.com/issues"
+    },
+    "homepage": "https://github.com/Salegomx/proferick.com",
+    "scripts": {
+        "sass": "sass --no-source-map --style=compressed --watch  ./src/scss:./assets/css",
+        "js:watch": "nodemon --watch ./src/js --ext js --exec \"npm run js:build\"",
+        "js:build": "node minify-js.js",
+        "start": "npm-run-all --parallel sass js:watch"
+    },
+    "devDependencies": {
+        "esbuild": "^0.25.4",
+        "nodemon": "^3.1.10",
+        "npm-run-all": "^4.1.5",
+        "sass": "^1.94.2"
+    }
+}

@@ -1,0 +1,65 @@
+@use '../abstract/variables' as *;
+
+h1 {font-size: $fs-1;}
+h2 {font-size: $fs-2;}
+h3 {font-size: $fs-3;}
+h4 {font-size: $fs-4;}
+h5 {font-size: $fs-5;}
+h6 {font-size: $fs-6;}
+.heading {
+    margin-bottom: $gap-half;
+    font-family: $font-title;
+    font-size: $fs-1;
+    font-weight: 700;
+    &:not(.hero .heading) {
+        display: inline;
+        text-decoration: 2px underline var(--clr-accent);
+        text-underline-offset: 5px;
+    }
+}
+.subheading {
+    margin-block: 0 $gap;
+    font-size: $fs-3;
+    text-wrap: balance;
+}
+.list {
+    padding-block: $gap;
+    list-style: inside;
+    line-height: 2
+}
+.btn {
+    @extend %btn;
+}
+.grid-2 {
+    display: grid;
+    justify-items: center;
+    gap: 2rem;
+}
+.sr-only {
+    position: absolute !important;
+    width: 1px !important;
+    height: 1px !important;
+    padding: 0 !important;
+    margin: -1px !important;
+    overflow: hidden !important;
+    clip: rect(0, 0, 0, 0) !important;
+    white-space: nowrap !important;
+    border-width: 0 !important;
+}
+.paragraph {
+    margin-block: $gap-half;
+}
+.highlight {
+    border-bottom: 3px solid var(--clr-highlighter-yellow);
+}
+[data-skew="1"] {
+    --skew-height: 3.5vw;
+    &[skew-type="top"] {
+        padding-top: var(--skew-height);
+        clip-path: polygon(100% var(--skew-height), 0 0, 0 100%, 100% 100%);
+    }
+    &[skew-type="bottom"] {
+        padding-bottom: var(--skew-height);
+        clip-path: polygon(0 0, 100% 0, 100% calc(100% - var(--skew-height)), 0% 100%);
+    }
+}

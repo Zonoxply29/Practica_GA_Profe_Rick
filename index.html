@@ -1,0 +1,1194 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <!-- Basic -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Proferick.com</title>
+
+    <!-- SEO -->
+    <meta name="robots" content="index, follow">
+    <meta name="author" content="sergiogomez.mx">
+    <meta name="description"
+        content="Ingeniero de software con años de experiencia en la industria en puestos como Front End, Back End y Fullstack.">
+    <meta name="keywords"
+        content="mentorias,cursos,tutoriales,programacion,desarrollo web,javascript,html,css,bootstrap,git,github,github pages,frontend,backend">
+    <link rel="canonical" href="https://proferick.com/" />
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="Profe Rick" />
+    <meta property="og:description"
+        content="Ingeniero de software con años de experiencia en la industria en puestos como Front End, Back End y Fullstack." />
+    <meta property="og:url" content="https://proferick.com/" />
+    <meta property="og:image" content="https://proferick.com/assets/img/preview.png" />
+    <meta property="og:site_name" content="Profe Rick" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Profe Rick" />
+    <meta name="twitter:description"
+        content="Ingeniero de software con años de experiencia en la industria en puestos como Front End, Back End y Fullstack." />
+    <meta name="twitter:image" content="https://proferick.com/assets/img/preview.png" />
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="./assets/css/styles.css" meida="all">
+    <link rel="stylesheet" href="./assets/css/mobile.css" media="(width <= 50rem)">
+    <link rel="stylesheet" href="./assets/css/desktop.css" media="(width > 50rem)">
+
+    <!-- FontAwesome -->
+    <link rel="stylesheet" href="./assets/css/fontawesome.css">
+
+    <!-- Favicon -->
+    <link href="./favicon.ico" rel="icon" type="image/x-icon">
+    <link rel="apple-touch-icon" href="./favicon.ico" />
+    
+</head>
+
+<body class="theme-light">
+    <a class="sr-only" href="#content">Omitir menu e ir al contenido</a>
+    <header id="mainHeader">
+        <div class="innerHeader">
+            <a href="./index.html">
+                <img class="logo" src="./assets/img/logo.svg" alt="proferick.com" width="185px" height="50px"
+                    loading="lazy">
+            </a>
+            <div class="header_actions">
+                <button class="theme_button" aria-label="Cambiar tema" title="Cambiar tema">
+                    <i class="fas theme_icon"></i>
+                </button>
+                <nav id="primaryNav" class="primaryNav">
+                    <ul>
+                        <li><a href="#about">Sobre mí</a></li>
+                        <li class="subMenu">
+                            <a href="#services">Servicios <i class="fas fa-caret-down"></i></a>
+                            <ul>
+                                <li><a href="?tabset=consulting&tab=mentor-frontend">Asesoramiento Front End</a></li>
+                                <li><a href="?tabset=consulting&tab=mentor-backend">Asesoramiento Back End</a></li>
+                                <li><a href="?tabset=otherServices&tab=recruitment">Reclutamiento en TI</a></li>
+                                <li><a href="?tabset=otherServices&tab=resume">Creación de CV</a></li>
+                                <li><a href="?tabset=otherServices&tab=profile">Perfil Técnico</a></li>
+                            </ul>
+                        </li>
+                        <!-- AGREGANDO EL IDIOMA A UN TEXTO PRACTICA GA AVANZADA-->
+                        <li class="subMenu">
+                            <a>Idioma <i class="fas fa-caret-down"></i></a>
+                            <ul>
+                                <li><a href="#!" onclick="cambiarIdioma('es'); return false;">🇪🇸 Español</a></li>
+                                <li><a href="#!" onclick="cambiarIdioma('en'); return false;">🇺🇸 English</a></li>
+                                <li><a href="#!" onclick="cambiarIdioma('jp'); return false;">🇯🇵 日本語</a></li>
+                            </ul>
+                        </li>
+                        <li><a href="#mentorship">Mentorías</a></li>
+                        <li><a href="#reviews">Reviews</a></li>
+
+                        <li><a href='https://wa.me/523327909070?text=Hola%20Ricardo,%20Vi%20tu%20página%20proferick.com%20y%20me%20gustaría%20contactarte'
+                                target="_blank" class="contact">Contacto</a></li>
+                    </ul>
+                </nav>
+                <button id="menuButton" class="mobileOnly" aria-label="Open Menu">
+                    <span class="top"></span>
+                    <span class="center"></span>
+                    <span class="bottom"></span>
+                </button>
+            </div>
+        </div>
+    </header>
+    <main id="content">
+        <section id="index" class="hero" data-skew="1" skew-type="bottom"
+            style="background-image: url('./assets/img/hero/hero.png');">
+            <div class="contentContainer grid-2">
+                <div class="hero_text">
+                    <h1 id ="hero-title" class="heading" style="font-size: 4rem;">Profe Rick</h1>
+                    <p id = "hero-description" class="subheading">Ingeniero de software con <span class="years_experience"></span> años de
+                        experiencia en la industria en puestos como desarrollador Front End, Back End y Fullstack.</p>
+
+                    <div class="hero_brands">
+                        <div>
+                            <img src="./assets/img/hero/ford.png" alt="Ford" loading="lazy">
+                            <img src="./assets/img/hero/lincoln.png" alt="Lincoln" loading="lazy">
+                        </div>
+                        <div>
+                            <img src="./assets/img/hero/bridgestone.png" alt="bridgestone" loading="lazy">
+                            <img src="./assets/img/hero/vml.png" alt="VML" loading="lazy">
+                        </div>
+                    </div>
+                </div>
+
+                <img class="hero_picture" src="./assets/img/hero/proferick.png" alt="" loading="lazy">
+            </div>
+        </section>
+
+        <div class="contentContainer">
+            <section id="about">
+                <h2 class="heading">Sobre Mí</h2>
+                <h3 class="subheading">Soy Ricardo Garrido, licenciado en Informática con especialidad en Ingeniería de
+                    Software.</h3>
+
+                <p class="paragraph">
+                    Llevo más de <span class="years_experience"></span> años trabajando en la industria como
+                    desarrollador
+                    Front-End, Back-End, Fullstack y <span class="years_entrepreneur"></span> años como empresario,
+                    ayudando a las empresas a
+                    <b class="highlight">crear proyectos, gestionar proyectos y personal, reclutar personal de IT para
+                        empresas,
+                        y aplicar entrevistas técnicas.</b>
+                    <br><br>
+
+                    A lo largo de los años he enseñado a personas de todas las edades, carreras y giros,
+                    desde <b class="highlight">niños y adolescentes</b> curiosos hasta adultos que quieren entrar a las
+                    industria IT, desde
+                    orientar <b class="highlight">empresarios y directivos</b> en el negocio de tecnologías de la
+                    información, hasta
+                    entrenar <b class="highlight">ingenieros junior.</b>
+                    <br><br>
+
+                    Me encanta enseñar y me tomo en serio el aprendizaje de cada alumno.
+                    Soy paciente, didáctico, personalizo cada sesión a las necesidades de mis clientes/alumnos.
+                    Siempre digo que soy el profesor que me hubiera gustado tener:
+                    Alguien que no solo sepa programar, sino que también sepa enseñar <b class="highlight">y con
+                        experiencia
+                        en la industia</b>.
+                </p>
+            </section>
+
+            <section id="services">
+                <h2 class="heading">Servicios</h2>
+                <h3 class="subheading">Aprende desarrollo web con un enfoque práctico y profesional.</h3>
+
+                <p class="paragraph">
+                    Ofrezco mentorias/clases personalizadas de programación web completamente práctico y centrado en lo
+                    que realmente se usa en la industria.
+                    <br><br>
+
+                    Enseño tecnologías como HTML, CSS, JavaScript, Git, Bootstrap entro otras (Puedes verlas <a
+                        href="#mentorship">aqui</a>).
+                    <br>
+                    Explico de forma clara y con ejercicios hechos a la medida del alumno/cliente.
+                    <br><br>
+                    Las mentorías están disponibles todos los días del año, en horarios flexibles,
+                    y son ideales para:
+                </p>
+
+                <ul class="list">
+                    <li>Personas que quieren ingresar a la industria IT</li>
+                    <li>Project managers JR que buscan aprender como gestionar equipos, reclutar ingenieros, solicitar
+                        avances, medir riesgos, atención al cliente, negociación con el cliente, etc.</li>
+                    <li>Estudiantes que desean prepararse para el mundo laboral</li>
+                    <li>Empresarios y directivos que buscan empezar y/o gestionar un proyecto de IT, cotizar reclutar
+                        personal, vender proyectos, etc.</li>
+                    <li>Niños/adolescentes/jovenes que quieren explorar la informática antes de elegir una universidad o
+                        carrera</li>
+                    <li>Reclutadores JR que buscan mejorar sus habilidades de reclutamiento, conocer stacks,
+                        tecnologías, como entrevistar candidatos y elegir CV's</li>
+                    <li>Estudiantes de bootcamp que buscan ayuda extra</li>
+                </ul>
+
+                <div class="grid-2">
+                    <div>
+                        <div id="consulting" class="accordion">
+                            <div id="mentor-frontend" class="accordion_item">
+                                <div class="accordion_item-head">Asesoramiento Front End</div>
+                                <div class="accordion_item-body">
+                                    Pensado para desarrolladores que ya trabajan en Front End pero se sienten
+                                    estancados. Te ayudo a resolver problemas reales que enfrentas en tus proyectos,
+                                    desde manejar estados complejos hasta mejorar la arquitectura del código. Vemos
+                                    herramientas modernas, buenas prácticas y cómo trabajar como lo hacen en las
+                                    empresas grandes.
+                                </div>
+                            </div>
+                            <div id="mentor-backend" class="accordion_item">
+                                <div class="accordion_item-head">Asesoramiento Back End</div>
+                                <div class="accordion_item-body">
+                                    Si ya estás trabajando con servidores, bases de datos o APIs pero te trabas con
+                                    ciertos temas, te ayudo a avanzar. Revisamos juntos tus dudas, errores comunes, y
+                                    cómo estructurar mejor tus proyectos. También podemos ver seguridad, rendimiento y
+                                    cómo pensar como un desarrollador sénior.
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div>
+                        <h3 class="subheading">Otros servicios:</h3>
+
+                        <p class="paragraph">
+                            Además, ofrezco asesoramiento para entrevistas técnicas, orientación a padres sobre opciones
+                            educativas,
+                            y apoyo en proyectos de software reales.
+                        </p>
+                    </div>
+                </div>
+                <br>
+                <div id="otherServices" class="accordion">
+                    <div id="recruitment" class="accordion_item">
+                        <div class="accordion_item-head">Reclutamiento en Tecnologías de la Información</div>
+                        <div class="accordion_item-body">
+                            Construye tu equipo de desarrolladores, te ayudo a conseguir tus desarrolladores y como
+                            gestionarlos, te apoyamos con el rango de precios por tecnología, experiencia e idiomas, las
+                            tecnologías que necesita el puesto por stack de tecnología garantizando su éxito en cada
+                            paso.
+                            <br><br>Te ayudo a reclutar:
+                            <br>
+                            <ul class="list">
+                                <li>Maquetadores</li>
+                                <li><a href="#frontend">Desarrolladores Frontend</a></li>
+                                <li><a href="#backend">Desarrolladores Backend</a></li>
+                                <li>Desarrolladores Fullstack</li>
+                                <li>Diseñadores UX/UI</li>
+                                <li>Reclutadores IT</li>
+                                <li>Project Managers</li>
+                                <li>Community Managers</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div id="resume" class="accordion_item">
+                        <div class="accordion_item-head">Creación de CV</div>
+                        <div class="accordion_item-body">
+                            Te ayudo a construir un currículum enfocado a tecnología, destacando tus proyectos,
+                            conocimientos y habilidades de manera clara y efectiva.
+                            <br>He trabajado con reclutadores y sé lo que buscan. Juntos armamos un CV que muestre lo
+                            mejor de ti, aunque estés empezando o cambiando de carrera.
+                        </div>
+                    </div>
+                    <div id="profile" class="accordion_item">
+                        <div class="accordion_item-head">Perfil Técnico</div>
+                        <div class="accordion_item-body">
+                            Te asesoro para que construyas un perfil profesional sólido en plataformas como LinkedIn,
+                            GitHub y otros canales donde los reclutadores buscan talento. Te doy consejos reales y te
+                            muestro cómo mostrar tus proyectos, cómo describir tus habilidades, y cómo generar presencia
+                            en línea que te abra puertas en la industria.
+                        </div>
+                    </div>
+                </div>
+
+                <link rel="stylesheet" href="./assets/css/accordions.css" media="all">
+                <script defer src="./assets/js/accordions.js"></script>
+            </section>
+
+            <section id="frontend">
+                <h2 class="heading">Desarrollador Frontend</h2>
+                <h3 class="subheading">Especialistas en desarrollo de interfaces de usuario modernas y responsivas</h3>
+
+                <ul class="cards">
+                    <li class="card">
+                        <img class="card-img" src="./assets/img/react.jpg" loading="lazy" fetchpriority="high"
+                            alt="React.js">
+                        <h3 class="card-title">Desarrollador React</h3>
+                        <p class="card-text">Desarrolla interfaces interactivas y dinámicas con componentes
+                            reutilizables.</p>
+                    </li>
+                    <li class="card">
+                        <img class="card-img" src="./assets/img/angular.jpg" loading="lazy" fetchpriority="high"
+                            alt="Angular">
+                        <h3 class="card-title">Desarrollador Angular</h3>
+                        <p class="card-text">Crea aplicaciones web estructuradas y escalables con arquitectura MVC y
+                            TypeScript.</p>
+                    </li>
+                    <li class="card">
+                        <img class="card-img" src="./assets/img/vue.jpg" loading="lazy" fetchpriority="high"
+                            alt="Vue.js">
+                        <h3 class="card-title">Desarrollador Vue.js</h3>
+                        <p class="card-text">Construye interfaces ligeras y reactivas con una curva de aprendizaje
+                            sencilla y flexible.</p>
+                    </li>
+                </ul>
+            </section>
+
+            <section id="backend">
+                <h2 class="heading">Desarrollador Backend</h2>
+                <h3 class="subheading">Especialistas en desarrollo del lado del servidor y arquitectura de aplicaciones
+                </h3>
+
+                <ul class="cards">
+                    <li class="card">
+                        <img class="card-img" src="./assets/img/ruby.jpg" loading="lazy" fetchpriority="high"
+                            alt="React.js">
+                        <h3 class="card-title">Desarrollador Ruby on Rails</h3>
+                        <p class="card-text">Desarrolla aplicaciones web completas rápidamente con un enfoque en la
+                            productividad.</p>
+                    </li>
+                    <li class="card">
+                        <img class="card-img" src="./assets/img/php-laravel.jpg" loading="lazy" fetchpriority="high"
+                            alt="Angular">
+                        <h3 class="card-title">Desarrollador PHP - Laravel</h3>
+                        <p class="card-text">Crea aplicaciones web robustas y seguras con un framework elegante y
+                            sintaxis limpia y practica.</p>
+                    </li>
+                    <li class="card">
+                        <img class="card-img" src="./assets/img/python-django.jpg" loading="lazy" fetchpriority="high"
+                            alt="Vue.js">
+                        <h3 class="card-title">Desarrollador Python - Django</h3>
+                        <p class="card-text">Desarrolla sitios web potentes y mantenibles con un enfoque en la rapidez,
+                            la seguridad y la practicidad.</p>
+                    </li>
+                    <li class="card">
+                        <img class="card-img" src="./assets/img/java-springboot.png" loading="lazy" fetchpriority="high"
+                            alt="Vue.js">
+                        <h3 class="card-title">Desarrollador Java - Springboot</h3>
+                        <p class="card-text">Construye aplicaciones empresariales escalables con una arquitectura sólida
+                            y modular.</p>
+                    </li>
+                    <li class="card">
+                        <img class="card-img" src="./assets/img/csharp.png" loading="lazy" fetchpriority="high"
+                            alt="Vue.js">
+                        <h3 class="card-title">Desarrollador C# - .NET</h3>
+                        <p class="card-text">Desarrolla soluciones web y de escritorio eficientes con una plataforma
+                            versátil y moderna.</p>
+                    </li>
+                    <li class="card">
+                        <img class="card-img" src="./assets/img/nodejs.png" loading="lazy" fetchpriority="high"
+                            alt="Vue.js">
+                        <h3 class="card-title">Desarrollador Node.js</h3>
+                        <p class="card-text">Crea aplicaciones rápidas y escalables del lado del servidor usando
+                            JavaScript asíncrono de toda la vida.</p>
+                    </li>
+                </ul>
+
+                <link rel="stylesheet" href="./assets/css/cards.css" media="all">
+            </section>
+
+            <section id="mentorship">
+                <div class="grid-2">
+                    <div>
+                        <h2 class="heading">Mentorías</h2>
+                        <h3 class="subheading">Diseñadas para personas que quieren entrar al mundo tech sin rodeos.</h3>
+
+                        <div class="sliding-logos">
+                            <ul class="sliding-logos-content">
+                                <li><span>HTML 5</span><i class="sliding-icon fab fa-html5"></i></li>
+                                <li><span>CSS 3</span><i class="sliding-icon fab fa-css"></i></li>
+                                <li><span>JavaScript</span><i class="sliding-icon fab fa-js"></i></li>
+                                <li><span>SASS</span><i class="sliding-icon fab fa-sass"></i></li>
+                                <li><span>Bootstrap 5</span><i class="sliding-icon fab fa-bootstrap"></i></li>
+                                <li><span>Vue.js</span><i class="sliding-icon fab fa-vuejs"></i></li>
+                                <li><span>PHP</span><i class="sliding-icon fab fa-php"></i></li>
+                                <li><span>Laravel</span><i class="sliding-icon fab fa-laravel"></i></li>
+                                <li><span>Git</span><i class="sliding-icon fab fa-git"></i></li>
+                                <li><span>Github</span><i class="sliding-icon fab fa-github"></i></li>
+                                <li><span>SQL</span><i class="sliding-icon fas fa-database"></i></li>
+                            </ul>
+                        </div>
+
+                        <link rel="stylesheet" href="./assets/css/slidingLogos.css" media="all">
+                        <script defer src="./assets/js/slidingLogos.js"></script>
+
+                        <p class="paragraph">
+                            Todo lo que enseño está pensado para que puedas conseguir trabajo, mejorar en el que ya
+                            tienes, vender proyectos, reclutar ingenieros, project managers, cotizar proyectos, calcular
+                            tiempos de entrega, desarrollar productos digitales etc.
+                            <br><br>
+                            Mis <b class="highlight">mentorias</b> son prácticas, actualizadas y enfocadas en lo que
+                            realmente se usa en la industria. Te explico paso a paso, con ejemplos reales y
+                            acompañamiento cercano.
+                            Aprendes como se trabaja en la vida real.
+                        </p>
+                    </div>
+
+                    <div id="courses" class="editor">
+                        <ul class="editor_tabset draggable-horizontal" role="tablist">
+                            <li role="tab"><span data-target="#editor_window-html"><i
+                                        class="fab fa-html5"></i><span>HTML 5</span></span></li>
+                            <li role="tab"><span data-target="#editor_window-css"><i class="fab fa-css"></i><span>CSS
+                                        3</span></span></li>
+                            <li role="tab"><span data-target="#editor_window-js"><i
+                                        class="fab fa-js"></i><span>JavaScript</span></span></li>
+                            <li role="tab"><span data-target="#editor_window-sass"><i
+                                        class="fab fa-sass"></i><span>SASS</span></span></li>
+                            <li role="tab"><span data-target="#editor_window-bootstrap"><i
+                                        class="fab fa-bootstrap"></i><span>Bootstrap</span></span></li>
+                            <li role="tab"><span data-target="#editor_window-vuejs"><i
+                                        class="fab fa-vuejs"></i><span>Vue.js</span></span></li>
+                            <li role="tab"><span data-target="#editor_window-php"><i
+                                        class="fab fa-php"></i><span>PHP</span></span></li>
+                            <li role="tab"><span data-target="#editor_window-laravel"><i
+                                        class="fab fa-laravel"></i><span>Laravel</span></span></li>
+                            <li role="tab"><span data-target="#editor_window-git"><i class="fab fa-git"></i><span>Git y
+                                        Github</span></span></li>
+                            <li role="tab"><span data-target="#editor_window-json"><i
+                                        class="fas fa-code"></i><span>JSON</span></span></li>
+                            <li role="tab"><span data-target="#editor_window-sql"><i
+                                        class="fas fa-database"></i><span>SQL</span></span></li>
+                        </ul>
+                        <div class="editor_display line-numbers">
+                            <div id="editor_window-html" class="editor_window">
+                                <pre>
+                                    <code class="language-markup">
+                                        &lt;!-- Documento HTML5, la estructura principal de toda página web --&gt;
+                                        &lt;!DOCTYPE html&gt;
+                                        &lt;html lang="es"&gt;
+                                        &lt;head&gt;
+                                            &lt;!-- Aquí van los archivos que dan estilo y funcionalidad a la página --&gt;
+                                            &lt;meta charset="UTF-8"&gt; &lt;!-- Soporte para ñ, tildes, etc. --&gt;
+                                            &lt;title&gt;Mi primera página&lt;/title&gt;
+
+                                            &lt;!-- Estilo en linea (no recomendado para proyectos grandes) --&gt;
+                                            &lt;style&gt;
+                                                body {
+                                                    background: #fafafa;
+                                                    color: #333;
+                                                    font-family: sans-serif;
+                                                }
+                                            &lt;/style&gt;
+                                        &lt;/head&gt;
+                                        &lt;body&gt;
+                                            &lt;!-- Aquí ponemos todo el contenido visible de la página --&gt;
+                                            &lt;h1&gt;¡Hola mundo!&lt;/h1&gt;
+                                            &lt;p&gt;Esta es mi primera página con HTML 😊&lt;/p&gt;
+
+                                            &lt;!-- Código JavaScript simple --&gt;
+                                            &lt;script&gt;
+                                                console.log("Bienvenido al mundo web");
+                                            &lt;/script&gt;
+                                        &lt;/body&gt;
+                                        &lt;/html&gt;
+                                    </code>
+                                </pre>
+                            </div>
+                            <div id="editor_window-css" class="editor_window">
+                                <pre>
+                                    <code class="language-css">
+                                        /* Variables reutilizables */
+                                        :root {
+                                            --color-primario: #4caf50;
+                                            --color-texto: #222;
+                                            --espaciado: 1.5rem;
+                                        }
+
+                                        /* Estilos base */
+                                        body {
+                                            font-family: 'Segoe UI', sans-serif;
+                                            color: var(--color-texto);
+                                            margin: 0;
+                                            padding: var(--espaciado);
+                                        }
+
+                                        /* Botón animado */
+                                        .boton {
+                                            background-color: var(--color-primario);
+                                            color: white;
+                                            border: none;
+                                            padding: 0.75rem 1.5rem;
+                                            border-radius: 0.5rem;
+                                            cursor: pointer;
+                                            animation: entrada 0.6s ease-out both;
+                                            transition: background 0.3s;
+                                        }
+
+                                        .boton:hover {
+                                            background-color: darkgreen;
+                                        }
+
+                                        /* Animación: fade + slide */
+                                        @keyframes entrada {
+                                            from {
+                                                opacity: 0;
+                                                transform: translateY(20px);
+                                            }
+                                            to {
+                                                opacity: 1;
+                                                transform: translateY(0);
+                                            }
+                                        }
+
+                                        /* Media query: pantallas pequeñas */
+                                        @media (max-width: 767px) {
+                                            body {
+                                                background: #f9f9f9;
+                                            }
+                                            .boton {
+                                                width: 100%;
+                                            }
+                                        }
+                                    </code>
+                                </pre>
+                            </div>
+                            <div id="editor_window-js" class="editor_window">
+                                <pre>
+                                    <code class="language-js">
+                                        // Esperar a que el DOM (la página web) esté listo
+                                        document.addEventListener("DOMContentLoaded", () => {
+                                            const boton = document.querySelector(".boton");
+                                            const mensaje = document.querySelector("#mensaje");
+
+                                            // Variables y función moderna (arrow function)
+                                            let clicks = 0;
+
+                                            boton.addEventListener("click", () => {
+                                                clicks++;
+                                                mensaje.textContent = `Haz hecho click ${clicks} ${clicks === 1 ? 'vez' : 'veces'}.`;
+
+                                                // Cambiar estilo dinámicamente
+                                                boton.style.transform = "scale(1.05)";
+                                                setTimeout(() => boton.style.transform = "scale(1)", 150);
+                                            });
+
+                                            // Tip: podrías guardar los clicks en localStorage para mantenerlos al recargar
+                                        });
+                                    </code>
+                                </pre>
+                            </div>
+                            <div id="editor_window-sass" class="editor_window">
+                                <pre>
+                                    <code class="language-scss">
+                                        // Variables para colores y tamaños
+                                        $color-primario: #4a90e2;
+                                        $color-texto: #333;
+                                        $espaciado: 1rem;
+
+                                        // Mixin para media queries reutilizable
+                                        @mixin respond($breakpoint) {
+                                            @if $breakpoint == tablet {
+                                                @media (max-width: 768px) { @content; }
+                                            } @else if $breakpoint == mobile {
+                                                @media (max-width: 480px) { @content; }
+                                            }
+                                        }
+
+                                        // Componente base
+                                        .card {
+                                            background: white;
+                                            padding: $espaciado;
+                                            border-radius: 0.5rem;
+                                            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+                                            color: $color-texto;
+                                            h2 {
+                                                color: $color-primario;
+                                                margin-bottom: 0.5rem;
+                                            }
+                                            p {
+                                                font-size: 1rem;
+                                                line-height: 1.5;
+                                            }
+                                            // Responsive usando mixin
+                                            @include respond(mobile) {
+                                                padding: 0.5rem;
+                                                h2 {
+                                                    font-size: 1.2rem;
+                                                }
+                                            }
+                                        }
+
+                                        // Otra clase que hereda estilos básicos
+                                        .card-destacada {
+                                            @extend .card;
+                                            border-left: 4px solid $color-primario;
+                                        }
+                                    </code>
+                                </pre>
+                            </div>
+                            <div id="editor_window-bootstrap" class="editor_window">
+                                <pre>
+                                    <code class="language-markup">
+                                        &lt;!DOCTYPE html&gt;
+                                        &lt;html lang="es"&gt;
+                                        &lt;head&gt;
+                                            &lt;meta charset="UTF-8" /&gt;
+                                            &lt;title&gt;Bootstrap Demo&lt;/title&gt;
+                                            &lt;link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"&gt;
+                                            &lt;link href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet"&gt;
+                                        &lt;/head&gt;
+                                        &lt;body class="bg-light p-4"&gt;
+                                            &lt;div class="container text-center shadow p-4 rounded bg-white"&gt;
+                                                &lt;h1 class="mb-3"&gt;&lt;i class="bi bi-lightning-charge"&gt;&lt;/i&gt; Bootstrap Rocks!&lt;/h1&gt;
+                                            
+                                                &lt;p class="lead"&gt;Diseño rápido, responsivo y elegante con clases listas para usar.&lt;/p&gt;
+                                            
+                                                &lt;button class="btn btn-primary" data-bs-toggle="collapse" data-bs-target="#extraInfo"&gt;
+                                                    Ver más
+                                                &lt;/button&gt;
+
+                                                &lt;div id="extraInfo" class="collapse mt-3"&gt;
+                                                    &lt;div class="alert alert-info"&gt;
+                                                        Este contenido se muestra con data-bs-toggle="collapse".
+                                                    &lt;/div&gt;
+                                                &lt;/div&gt;
+
+                                                &lt;div class="row mt-4"&gt;
+                                                    &lt;div class="col-md-6"&gt;
+                                                        &lt;div class="border p-3 rounded"&gt;Columna 1&lt;/div&gt;
+                                                    &lt;/div&gt;
+                                                    &lt;div class="col-md-6"&gt;
+                                                        &lt;div class="border p-3 rounded"&gt;Columna 2&lt;/div&gt;
+                                                    &lt;/div&gt;
+                                                &lt;/div&gt;
+                                            &lt;/div&gt;
+
+                                            &lt;script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"&gt;&lt;/script&gt;
+                                        &lt;/body&gt;
+                                        &lt;/html&gt;
+                                    </code>
+                                </pre>
+                            </div>
+                            <div id="editor_window-vuejs" class="editor_window">
+                                <pre>
+                                    <code class="language-markup">
+                                        &lt;template>
+                                            &lt;div class="counter"&gt;
+                                                &lt;h1 :class="{ danger: count &gt; 5 }"&gt;Contador: {{ count }} &lt;/h1&gt;
+                                                &lt;button @click="count++"&gt;Incrementar &lt;/button&gt;
+                                                &lt;button @click="reset"&gt;Reiniciar &lt;/button&gt;
+                                                &lt;p v-if="isHigh"&gt;¡Ya pasaste de 5! &lt;/p&gt;
+                                            &lt;/div&gt;
+                                        &lt;/template&gt;
+
+                                        &lt;script setup&gt;
+                                            import { ref, computed } from 'vue';
+
+                                            const count = ref(0);
+                                            const isHigh = computed(() =&gt; count.value &gt; 5);
+
+                                            function reset() {
+                                            count.value = 0;
+                                            }
+                                        &lt;/script&gt;
+
+                                        &lt;style scoped&gt;
+                                            .counter {
+                                                text-align: center;
+                                                margin: 2rem auto;
+                                                transition: all 0.3s ease;
+                                            }
+                                            button {
+                                                margin: 0.5rem;
+                                                padding: 0.5rem 1rem;
+                                            }
+                                            .danger {
+                                                color: red;
+                                                animation: pulse 0.5s ease;
+                                            }
+                                            @keyframes pulse {
+                                                0% { transform: scale(1); }
+                                                50% { transform: scale(1.1); }
+                                                100% { transform: scale(1); }
+                                            }
+                                        &lt;/style&gt;
+                                    </code>
+                                </pre>
+                            </div>
+                            <div id="editor_window-php" class="editor_window">
+                                <pre>
+                                    <code class="language-php">
+                                        &lt;?php
+                                            // Función para generar una lista de elementos
+                                            function generarLista($arreglo) {
+                                                echo "&lt;ul&gt;"; // Inicia una lista no ordenada
+                                                foreach ($arreglo as $elem) {
+                                                    echo "&lt;li&gt;" . $elem . "&lt;/li&gt;"; // Imprime cada elemento de la lista
+                                                }
+                                                echo "&lt;/ul&gt;"; // Cierra la lista
+                                            }
+
+                                            // Un arreglo con algunos elementos
+                                            $frutas = ["Manzana", "Banano", "Cereza", "Fresa", "Kiwi"];
+                                        ?&gt;
+
+                                        &lt;!DOCTYPE html&gt;
+                                        &lt;html lang="es"&gt;
+                                        &lt;head&gt;
+                                            &lt;meta charset="UTF-8"&gt;
+                                            &lt;title&gt;Mi página con PHP&lt;/title&gt;
+                                        &lt;/head&gt;
+                                        &lt;body&gt;
+                                            &lt;h1&gt;Lista de Frutas&lt;/h1&gt;
+                                            &lt;p&gt;A continuación, se muestra una lista de frutas:&lt;/p&gt;
+
+                                            &lt;?php
+                                                // Llamamos a la función para generar la lista
+                                                generarLista($frutas);
+                                            ?&gt;
+
+                                            &lt;p&gt;Este ejemplo muestra cómo recorrer un arreglo en PHP.&lt;/p&gt;
+
+                                        &lt;/body&gt;
+                                        &lt;/html&gt;
+                                    </code>
+                                </pre>
+                            </div>
+                            <div id="editor_window-laravel" class="editor_window">
+                                <pre>
+                                    <code class="language-php">
+                                        // routes/web.php
+                                        use App\Http\Controllers\FrutaController;
+
+                                        // Definimos una ruta que ejecuta el método 'index' del controlador FrutaController
+                                        Route::get('/frutas', [FrutaController::class, 'index']);
+
+                                        // app/Http/Controllers/FrutaController.php
+
+                                        namespace App\Http\Controllers;
+
+                                        use Illuminate\Http\Request;
+
+                                        class FrutaController extends Controller
+                                        {
+                                            // Método que maneja la solicitud GET para la ruta /frutas
+                                            public function index()
+                                            {
+                                                // Creamos un arreglo con nombres de frutas
+                                                $frutas = ["Manzana", "Banano", "Cereza", "Fresa", "Kiwi"];
+
+                                                // Pasamos el arreglo a la vista 'frutas.blade.php'
+                                                return view('frutas', compact('frutas'));
+                                            }
+                                        }
+                                    </code>
+                                </pre>
+                            </div>
+                            <div id="editor_window-git" class="editor_window">
+                                <pre>
+                                    <code class="language-bash">
+                                        # 1. Inicializar un nuevo repositorio Git en tu proyecto
+                                        git init
+
+                                        # 2. Ver el estado actual de los archivos en tu repositorio
+                                        git status
+
+                                        # 3. Añadir archivos al área de preparación (staging area)
+                                        git add archivo.txt  # Añadir un archivo específico
+                                        git add .            # Añadir todos los archivos modificados
+
+                                        # 4. Hacer un commit con un mensaje que describa los cambios
+                                        git commit -m "Añadir archivo de configuración"
+
+                                        # 5. Ver el historial de commits
+                                        git log
+
+                                        # 6. Configurar tu nombre y correo (solo necesario si es tu primera vez usando Git)
+                                        git config --global user.name "Tu Nombre"
+                                        git config --global user.email "tuemail@dominio.com"
+
+                                        # 7. Vincular tu repositorio local con un repositorio remoto (como GitHub)
+                                        git remote add origin https://github.com/usuario/repositorio.git
+
+                                        # 8. Subir (push) tus cambios al repositorio remoto
+                                        git push -u origin master  # Enviar al branch principal (master)
+
+                                        # 9. Obtener (pull) los cambios más recientes desde el repositorio remoto
+                                        git pull origin master  # Obtener cambios del branch principal (master)
+
+                                        # 10. Crear una nueva rama para trabajar en nuevas características
+                                        git checkout -b nueva-rama
+
+                                        # 11. Cambiar a una rama existente
+                                        git checkout master  # Cambiar a la rama principal (master)
+
+                                        # 12. Fusionar (merge) cambios de una rama a la rama actual
+                                        git merge nueva-rama  # Fusionar los cambios de 'nueva-rama' a 'master'
+
+                                        # 13. Eliminar una rama local que ya no necesitas
+                                        git branch -d nueva-rama  # Elimina la rama local 'nueva-rama'
+
+                                        # 14. Ver las ramas existentes en tu repositorio
+                                        git branch
+
+                                    </code>
+                                </pre>
+                            </div>
+                            <div id="editor_window-json" class="editor_window">
+                                <pre>
+                                    <code class="language-js">
+                                        {
+                                            "tienda": {
+                                                "nombre": "Mi Tienda Online",  // Nombre de la tienda
+                                                "direccion": "Av. Principal 123, Ciudad XYZ",  // Dirección de la tienda
+                                                "telefono": "+1 234 567 890",  // Número de teléfono de contacto
+                                                "correo": "contacto@mitienda.com",  // Correo de contacto
+                                                "productos": [  // Lista de productos disponibles en la tienda
+                                                {
+                                                    "id": 1,  // Identificador único del producto
+                                                    "nombre": "Camiseta",  // Nombre del producto
+                                                    "descripcion": "Camiseta de algodón, color azul",  // Descripción del producto
+                                                    "precio": 19.99,  // Precio del producto
+                                                    "categoria": "Ropa",  // Categoría del producto (por ejemplo, ropa, calzado)
+                                                    "disponible": true,  // Si el producto está disponible (true o false)
+                                                    "tallas": ["S", "M", "L", "XL"],  // Opciones de tallas disponibles para este producto
+                                                    "colores": ["Azul", "Rojo", "Verde"]  // Colores disponibles para este producto
+                                                },
+                                                {
+                                                    "id": 2,  // Identificador único del producto
+                                                    "nombre": "Zapatos Deportivos",  // Nombre del producto
+                                                    "descripcion": "Zapatos cómodos para correr",  // Descripción del producto
+                                                    "precio": 49.99,  // Precio del producto
+                                                    "categoria": "Calzado",  // Categoría del producto
+                                                    "disponible": true,  // Si el producto está disponible
+                                                    "tallas": [38, 39, 40, 41],  // Tallas disponibles para el calzado
+                                                    "colores": ["Negro", "Blanco", "Azul"]  // Colores disponibles para el calzado
+                                                },
+                                                {
+                                                    "id": 3,  // Identificador único del producto
+                                                    "nombre": "Mochila",  // Nombre del producto
+                                                    "descripcion": "Mochila con varios compartimientos",  // Descripción del producto
+                                                    "precio": 29.99,  // Precio del producto
+                                                    "categoria": "Accesorios",  // Categoría del producto
+                                                    "disponible": false,  // El producto no está disponible
+                                                    "tallas": ["Única"],  // Solo hay una talla disponible
+                                                    "colores": ["Negro", "Gris"]  // Colores disponibles para la mochila
+                                                }
+                                                ]
+                                            }
+                                        }
+                                    </code>
+                                </pre>
+                            </div>
+                            <div id="editor_window-sql" class="editor_window">
+                                <pre>
+                                    <code class="language-sql">
+                                        -- Crear una base de datos llamada 'tienda_online'
+                                        CREATE DATABASE tienda_online;
+
+                                        -- Seleccionar la base de datos 'tienda_online' para usarla
+                                        USE tienda_online;
+
+                                        -- Crear una tabla llamada 'productos' para almacenar información de productos
+                                        CREATE TABLE productos (
+                                            id INT AUTO_INCREMENT PRIMARY KEY,  -- 'id' es la clave primaria y se incrementa automáticamente
+                                            nombre VARCHAR(100),  -- 'nombre' es un campo de texto (hasta 100 caracteres)
+                                            descripcion TEXT,  -- 'descripcion' es un campo de texto más largo
+                                            precio DECIMAL(10, 2),  -- 'precio' es un número decimal con hasta 10 dígitos, 2 de ellos después del punto
+                                            categoria VARCHAR(50),  -- 'categoria' es un campo de texto (hasta 50 caracteres)
+                                            disponible BOOLEAN  -- 'disponible' es un valor booleano (true o false)
+                                        );
+
+                                        -- Insertar algunos datos de ejemplo en la tabla 'productos'
+                                        INSERT INTO productos (nombre, descripcion, precio, categoria, disponible)
+                                        VALUES
+                                            ('Camiseta', 'Camiseta de algodón, color azul', 19.99, 'Ropa', TRUE),
+                                            ('Zapatos Deportivos', 'Zapatos cómodos para correr', 49.99, 'Calzado', TRUE),
+                                            ('Mochila', 'Mochila con varios compartimientos', 29.99, 'Accesorios', FALSE);
+
+                                        -- Seleccionar todos los productos disponibles (disponible = TRUE)
+                                        SELECT * FROM productos WHERE disponible = TRUE;
+
+                                        -- Actualizar el precio de un producto (por ejemplo, cambiar el precio de la camiseta)
+                                        UPDATE productos
+                                        SET precio = 22.99
+                                        WHERE nombre = 'Camiseta';
+
+                                        -- Eliminar un producto (por ejemplo, eliminar la mochila que ya no está disponible)
+                                        DELETE FROM productos
+                                        WHERE nombre = 'Mochila';
+
+                                        -- Contar el número de productos en la tabla 'productos'
+                                        SELECT COUNT(*) AS total_productos FROM productos;
+
+                                        -- Consultar los productos en una categoría específica, ordenados por precio
+                                        SELECT * FROM productos
+                                        WHERE categoria = 'Ropa'
+                                        ORDER BY precio DESC;  -- Ordenamos de mayor a menor precio
+                                    </code>
+                                </pre>
+                            </div>
+                        </div>
+                    </div>
+
+                    <link rel="stylesheet" href="./assets/css/codeEditor.css" media="all">
+                    <script defer src="./assets/js/codeEditor.js"></script>
+                    <link rel="stylesheet" href="./assets/css/prism.css">
+                    <script defer src="./assets/js/prism.js"></script>
+
+                </div>
+            </section>
+
+            <section id="reviews">
+                <h2 class="heading">Reviews</h2>
+                <h3 class="subheading">Las mejores mentorías. No lo digo yo...</h3>
+
+                <div class="reviews-container">
+                    <div class="reviews-content">
+
+                        <div class="review-card" data-stars="4">
+                            <div class="review-head">
+                                <span class="review-title">Edgar</span>
+                            </div>
+                            <p class="review-body">
+                                ¡Excelente!
+                                <br>Recomiendo muchísimo a Ricardo, se toma el tiempo para escuchar tu problema para
+                                poder ayudarte de la mejor forma, además te reta a que recuerdes conceptos básicos si ya
+                                tienes algo de experiencia.
+                                <br><br>Yo con una clase me di cuenta que se más de lo que pensaba. Ricardo me dio orden
+                                para seguir con mi proyecto y no dudaré en seguir tomando asesorías con él.
+                            </p>
+                        </div>
+
+                        <div class="review-card" data-stars="5">
+                            <div class="review-head">
+                                <span class="review-title">Gabo</span>
+                            </div>
+                            <p class="review-body">
+                                ¡Perfecto!
+                                <br>Su primer clase de información es robusta en experiencias, aclara y es muy
+                                transparente respecto al objetivo, busca ser pragmático para que alumno logre su
+                                propósito mediante el desarrollo de aprendizaje en las tecnologías que menciona en su
+                                muro para dar clases, excelente tutor.
+                            </p>
+                        </div>
+
+                        <div class="review-card" data-stars="5">
+                            <div class="review-head">
+                                <span class="review-title">Fredel</span>
+                            </div>
+                            <p class="review-body">
+                                ¡Excelente!
+                                <br>A mi hijo le encantó la forma en la que da la clase Ricardo.
+                                <br><br>El tomaba antes ya con otros maestros y de verdad le gustó mucho más la clase
+                                con él.
+                            </p>
+                        </div>
+
+                        <div class="review-card" data-stars="5">
+                            <div class="review-head">
+                                <span class="review-title">Luis Enrique</span>
+                            </div>
+                            <p class="review-body">
+                                ¡Perfecto!
+                                <br>Ricardo es una persona muy amable y paciente para impartir las clases. También pude
+                                notar que sabe mucho de JavaScript, es un experto.
+                                <br><br>Otro aspecto a resaltar es que diseña las clases de acuerdo a lo que necesites y
+                                así puedes avanzar a un paso personalizado.
+                            </p>
+                        </div>
+
+                        <div class="review-card" data-stars="5">
+                            <div class="review-head">
+                                <span class="review-title">Xavier</span>
+                            </div>
+                            <p class="review-body">
+                                ¡Perfecto!
+                                <br>¡Excelente profesor! 10 de 10 Sus clases son super amenas y muy profesionales,
+                                conoce y maneja muy bien los temas y te enseña de una manera personalizada y súper
+                                simple de entender.
+                                <br><br>No dudes en contactarlo, él te ayuda a sacar todas tus dudas.
+                                <br>Lo recomiendo al 100%.
+                            </p>
+                        </div>
+
+                        <div class="review-card" data-stars="5">
+                            <div class="review-head">
+                                <span class="review-title">Raúl</span>
+                            </div>
+                            <p class="review-body">
+                                ¡Perfecto!
+                                <br>Excelente profesor, muy asertivo y con gran conocimiento de la industria IT.
+                                <br>Tiene una manera de enseñar personalizada a cada alumno además de un gran gusto por
+                                enseñar y mantenerse actualizado constantemente.
+                                <br><br>Totalmente recomendado.
+                            </p>
+                        </div>
+
+                        <div class="review-card" data-stars="5">
+                            <div class="review-head">
+                                <span class="review-title">Juan</span>
+                            </div>
+                            <p class="review-body">
+                                ¡Perfecto!
+                                <br>Ricardo es un experto en la materia, desglosó mi conocimiento meticulosamente para
+                                deducir la manera más apropiada de avanzar en mi trayecto como developer.
+                                <br>Siento que fue una buena decisión contratarlo.
+                            </p>
+                        </div>
+
+                        <div class="review-card" data-stars="5">
+                            <div class="review-head">
+                                <span class="review-title">Adam Samuel</span>
+                            </div>
+                            <p class="review-body">
+                                ¡Perfecto!
+                                <br>Muy profesional, es un buen maestro, es notoria su experiencia en el campo de la
+                                programación, sus clases son muy prácticas y se ven varios temas a la vez.
+                                <br>Recomendado.
+                            </p>
+                        </div>
+
+                        <div class="review-card" data-stars="5">
+                            <div class="review-head">
+                                <span class="review-title">Mario</span>
+                            </div>
+                            <p class="review-body">
+                                ¡Perfecto!
+                                <br>Ricardo es una persona muy profesinal y sabe bien de tecnología, está actualizado y
+                                es muy recomedable!!!
+                            </p>
+                        </div>
+
+                        <div class="review-card" data-stars="5">
+                            <div class="review-head">
+                                <span class="review-title">Sergio</span>
+                            </div>
+                            <p class="review-body">
+                                ¡Perfecto!
+                                <br>Es muy buen profe, te va explicando en tiempo real el porqué de las cosas que te
+                                enseña y se adapta a tus necesidades.
+                            </p>
+                        </div>
+
+                        <div class="review-card" data-stars="5">
+                            <div class="review-head">
+                                <span class="review-title">Oscar</span>
+                            </div>
+                            <p class="review-body">
+                                ¡Perfecto!
+                                <br>Muy buen profesor, excelente metodología de enseñanza.
+                                <br><br>Sus clases son amenas y te explica a fondo cualquier duda que llegues a
+                                presentar durante la clase, domina muy bien los conceptos.
+                                <br><br>Recomendable al 100.
+                            </p>
+                        </div>
+
+                        <div class="review-card" data-stars="5">
+                            <div class="review-head">
+                                <span class="review-title">Orlando</span>
+                            </div>
+                            <p class="review-body">
+                                ¡Perfecto!
+                                <br>Excelente profesor!
+                                <br>Llevo un tiempo intentando aprender programación y por fín he encontrado al mentor
+                                adecuado.
+                                <br><br>Muchas gracias Rick!
+                            </p>
+                        </div>
+
+                        <div class="review-card" data-stars="5">
+                            <div class="review-head">
+                                <span class="review-title">Perla</span>
+                            </div>
+                            <p class="review-body">
+                                ¡Perfecto!
+                                <br>Es un profesor muy puntual en las clases, me está entrenando para el perfil de IT
+                                Recruiter y asesoría en diferentes aplicaciones, es muy paciente y comprensivo.
+                            </p>
+                        </div>
+
+                        <div class="review-card" data-stars="5">
+                            <div class="review-head">
+                                <span class="review-title">Ana</span>
+                            </div>
+                            <p class="review-body">
+                                ¡Perfecto!
+                                <br>Excelente profesor, con vasto conocimiento de la industria.
+                                <br>Muy formal, puntual y flexible. Lo recomiendo ampliamente.
+                            </p>
+                        </div>
+
+                        <div class="review-card" data-stars="5">
+                            <div class="review-head">
+                                <span class="review-title">Elizabeth</span>
+                            </div>
+                            <p class="review-body">
+                                ¡Perfecto!
+                                <br>Ricardo se comunicó en menos de 1hr, me asesoró a mí y a mi hijo sobre empleos,
+                                universidades, idiomas y además le explicó temas de PHP a mi hijo, todo con mucha
+                                claridad, paciencia y amabilidad.
+                                <br><br>Volveré a contratar!!!
+                            </p>
+                        </div>
+
+                        <div class="review-card" data-stars="5">
+                            <div class="review-head">
+                                <span class="review-title">Raúl</span>
+                            </div>
+                            <p class="review-body">
+                                ¡Perfecto!
+                                <br>Ricardo es muy comprometido con lo que hace.
+                                <br>Te enseña lo que se necesita en la industria gracias a su experiencia profesional. Y
+                                es muy clara su forma de enseñanza.
+                                <br><br>En definitiva seguiré con él.
+                            </p>
+                        </div>
+
+                        <div class="review-card" data-stars="5">
+                            <div class="review-head">
+                                <span class="review-title">Matthew</span>
+                            </div>
+                            <p class="review-body">
+                                ¡Perfecto!
+                                <br>Ricardo es muy amable.
+                                <br>Me respondió el mismo día y agendamos una clase muestra para el dia siguiente.
+                                <br><br>Se ve que le gusta enseñar y se preocupa por el aprendizaje de sus alumnos.
+                                <br>Muy recomandado.
+                            </p>
+                        </div>
+
+                    </div>
+                </div>
+
+                <link rel="stylesheet" href="./assets/css/reviews.css" media="all">
+                <script defer src="./assets/js/reviews.js"></script>
+
+            </section>
+
+            <section id="contact" class="grid-2">
+                <div>
+                    <h2 class="heading">Contacto</h2>
+                    <h3 class="subheading">¿Tienes dudas? ¿Quieres saber si esto es para ti?</h3>
+
+                    <p class="paragraph">
+                        <b class="highlight">Escríbeme sin compromiso.</b>
+                        <br>
+                        Te ayudo a entender por dónde empezar o cómo mejorar lo que ya sabes.
+                        Me puedes contactar todos los días del año.
+                        Ya sea que estés buscando una clase, asesoría puntual o simplemente orientación,
+                        estaré encantado de escucharte y ayudarte.
+                    </p>
+                </div>
+            </section>
+        </div>
+    </main>
+    <footer id="mainFooter" data-skew="1" skew-type="top">
+        <a class="logo" href="#">
+            <img src="./assets/img/logo.svg" alt="proferick.com" width="185px" height="50px" loading="lazy">
+        </a>
+        <a class="logoEmail" href="mailto:contacto@proferick.com">contacto@proferick.com</a>
+        <div class="innerFooter">
+            <nav class="footerNav">
+                <h2 class="footerNavTitle">Mentorías Front End</h2>
+                <ul>
+                    <li><a target="_self" href="?tabset=courses&tab=html">HTML</a></li>
+                    <li><a target="_self" href="?tabset=courses&tab=css">CSS</a></li>
+                    <li><a target="_self" href="?tabset=courses&tab=sass">SASS</a></li>
+                    <li><a target="_self" href="?tabset=courses&tab=js">JavaScript</a></li>
+                    <li><a target="_self" href="?tabset=courses&tab=bootstrap">Bootstrap</a></li>
+                </ul>
+            </nav>
+            <nav class="footerNav">
+                <h2 class="footerNavTitle">Mentorías Back End</h2>
+                <ul>
+                    <li><a target="_self" href="?tabset=courses&tab=sql">SQL</a></li>
+                    <li><a target="_self" href="?tabset=courses&tab=php">PHP</a></li>
+                    <li><a target="_self" href="?tabset=courses&tab=laravel">Laravel</a></li>
+                    <li><a target="_self" href="?tabset=courses&tab=git">GIT & GitHub</a></li>
+                </ul>
+            </nav>
+            <nav class="footerNav">
+                <h2 class="footerNavTitle">Servicios</h2>
+                <ul>
+                    <li><a target="_self" href="?tabset=consulting&tab=mentor-frontend">Asesoramiento Front End</a></li>
+                    <li><a target="_self" href="?tabset=consulting&tab=mentor-backend">Asesoramiento Back End</a></li>
+                    <li><a target="_self" href="?tabset=otherServices&tab=recruitment">Reclutamiento en TI</a></li>
+                    <li><a target="_self" href="?tabset=otherServices&tab=resume">Creación de CV</a></li>
+                    <li><a target="_self" href="?tabset=otherServices&tab=profile">Perfil Técnico</a></li>
+                </ul>
+            </nav>
+            <nav class="footerNav">
+                <h2 class="footerNavTitle">Sobre Mí</h2>
+                <ul>
+                    <li><a href="#about">Quién soy?</a></li>
+                    <li><a href='https://wa.me/523327909070?text=Hola%20Ricardo,%20Vi%20tu%20página%20proferick.com%20y%20me%20gustaría%20contactarte'
+                            target="_blank"><i class="fa-brands fa-whatsapp"></i> | Whatsapp</a></li>
+                    <li><a href="https://www.linkedin.com/in/ricardo-garrido-a2a1b167/" target="_blank"
+                            rel="noopener noreferrer"><i class="fa-brands fa-linkedin-in"></i> | Linked In</a></li>
+                    <li><a href="https://www.instagram.com/codementorrick" target="_blank" rel="noopener noreferrer"><i
+                                class="fa-brands fa-instagram"></i> | Instagram</a></li>
+                </ul>
+            </nav>
+        </div>
+        <div class="footerCopy">
+            <span>© <span id="year_current"></span> proferick.com</span><span class="desktopOnly">•</span><span>Creado
+                por el alumno <a href="//sergiogomez.mx" target="_blank">Sergio Gómez</a></span>
+        </div>
+    </footer>
+    <button id="backToTop" class="invisible" aria-label="Click to go back to top">
+        <i class="fas fa-arrow-up"></i>
+    </button>
+
+    <script defer src="./assets/js/main.js"></script>
+</body>
+
+</html>

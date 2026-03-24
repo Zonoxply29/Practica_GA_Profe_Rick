@@ -1,0 +1,53 @@
+@use '../abstract/variables' as *;
+
+.hero {
+    padding: $gap-double;
+    color: var(--clr-white);
+    text-shadow: 2px 2px 2px var(--clr-black);
+    background-size: cover;
+    background-position: center;
+    @media (width > $mobile) {
+        background-attachment: fixed;
+    }
+    .heading {
+        font-family: $font-title;
+        font-size: $fs-title;
+    }
+    .subheading {
+        font-size: $fs-3;
+    }
+    &_text {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-evenly;
+    }
+    &_brands {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        flex-wrap: wrap;
+        gap: $gap-half;
+        > div {
+            flex-basis: 300px;
+            flex-grow: 1;
+            flex-shrink: 1;
+            display: flex;
+            justify-content: space-evenly;
+            gap: $gap;
+            img {
+                width: 125px;
+                aspect-ratio: 16/9;
+                object-fit: contain;
+                border-radius: $border-radius;
+            }
+        }
+        
+    }
+    &_picture {
+        width: 60%;
+        aspect-ratio: 1/1.25;
+        object-fit: cover;
+        object-position: center;
+        border-radius: 100%;
+    }
+}

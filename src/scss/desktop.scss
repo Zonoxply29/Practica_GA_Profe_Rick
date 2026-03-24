@@ -1,0 +1,51 @@
+@use './abstract/variables' as *;
+
+.theme_button {
+    scale: 1.25;
+}
+.primaryNav ul {
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+    li.subMenu {
+        position: relative;
+        ul {
+            display: none;
+            width: 15rem;
+            position: absolute;
+            top: 1.5rem;
+            border-radius: $border-radius;
+            background-color: var(--clr-bg);
+            outline: 1pt solid var(--clr-gray);
+            a {
+                display: block;
+                padding: 0.75rem;
+                width: 100%;
+                border-bottom: 1pt solid var(--clr-gray);
+            }
+        }
+        &.subMenu:hover {
+            a i.icon-down {
+                transform: rotate(0.5turn);
+                transition: $transition-time;
+            }
+            ul {
+                display: block;
+            }
+        }
+    } 
+    a:hover:not(.contact) {
+        opacity: 0.75;
+    }
+    .contact {
+        @extend %btn
+    }
+}
+.grid-2 {
+    grid-template-columns: 55% 1fr;
+}
+
+// code editor and courses text
+#mentorship .grid-2 {
+    grid-template-columns: 1fr 55%;
+}

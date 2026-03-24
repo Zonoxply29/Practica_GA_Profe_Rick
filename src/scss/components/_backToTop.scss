@@ -1,0 +1,27 @@
+@use '../abstract/variables' as *;
+
+#backToTop {
+    --thisOffset: 2rem;
+    position: fixed;
+    bottom: var(--thisOffset);
+    right: var(--thisOffset);
+    width: 3rem;
+    color: var(--clr-white);
+    aspect-ratio: 1;
+    border-radius: $round;
+    background-color: var(--clr-accent);
+    cursor: pointer;
+    border: none;
+    transition: $transition-time;
+    &[aria-hidden="true"] {
+        visibility: hidden;
+        opacity: 0;
+    }
+    &[aria-hidden="false"] {
+        visibility: visible;
+        opacity: 1;
+    }
+    &:hover {
+        transform: scale(1.1);
+    }
+}

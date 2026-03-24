@@ -1,0 +1,49 @@
+@use './abstract/variables' as *;
+
+.accordion {
+    --thisRadius: #{$border-radius};
+    padding: 10px;
+    background-color: var(--clr-bg);
+    border: 1pt solid var(--clr-gray);
+    border-radius: var(--thisRadius);
+    scroll-margin-top: $scroll-margin-top;
+    &_item {
+        overflow: hidden;
+        &:first-child {
+            border-radius: var(--thisRadius) var(--thisRadius) 0 0;
+        }
+        &:last-child {
+            border-radius: 0 0 var(--thisRadius) var(--thisRadius);
+        }
+        &-head {
+            padding: 10px;
+            font-size: $fs-6;
+            border: 1pt solid var(--clr-gray);
+            border-bottom: none;
+            background-color: var(--clr-bg-accordrion);
+            cursor: pointer;
+            user-select: none;
+            &[aria-selected="true"] {
+                font-weight: 700;
+                background-color: var(--clr-bg-accordrion-active);
+                &::before {
+                    content: '• ';
+                    color: var(--clr-accent);
+                }
+            }
+        }
+        &-body {
+            height: 0;
+            padding-inline: 10px;
+            border: 1pt solid var(--clr-gray);
+            border-top: none;
+            overflow: hidden;
+            transition: $transition-time;
+            &[aria-expanded="true"] {
+                display: block;
+                padding-block: 20px;
+                height: fit-content;
+            }
+        }
+    }
+} 

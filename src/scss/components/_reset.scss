@@ -1,0 +1,46 @@
+@use '../abstract/variables' as *;
+
+// Reset Browser Defaults
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+html {
+    scroll-behavior: smooth;
+}
+:where(img, picture, video, canvas, svg) {
+    max-width: 100%;
+}
+:where(input, button, textarea, select) {
+    font: inherit;
+}
+:where(a, a:hover) {
+    padding: 1pt;
+    text-decoration: none;
+}
+:where(ul, ol) {
+    list-style: none;
+}
+:where(h1, h2, h3, h4, h5, h6) {
+    font-size: 1em;
+    font-weight: 400;
+}
+:where(b, em) {
+    font-style: normal;
+    font-weight: 600;
+}
+// REMOVE ALL ANIMATIONS, TRANSITIONS AND SMOOTH SCROLL FOR PEOPLE THAT PREFER NOT TO SEE THEM
+@media (prefers-reduced-motion: reduce) {
+    html:focus-within {
+        scroll-behavior: auto;
+    }
+    *,
+    *::before,
+    *::after {
+        animation-duration: 0.01ms;
+        animation-iteration-count: 1;
+        transition-duration: 0.01ms;
+        scroll-behavior: auto;
+    }
+}
