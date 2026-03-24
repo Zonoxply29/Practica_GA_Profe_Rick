@@ -25,18 +25,11 @@ function cambiarIdioma(nuevoIdioma) {
         return;
     }
 
+    const idiomaAnterior = idiomaActual;
+
     // Tiempo transcurrido en el idioma actual (en segundos).
     const tiempoFin = Date.now();
-    const segundos = Math.round((tiempoFin - tiempoInicio) / 1000);
-
-    // Envía evento personalizado a Google Analytics 4 si gtag está disponible.
-    if (typeof gtag !== 'undefined') {
-        gtag('event', 'cambio_de_idioma', {
-            idioma_anterior: idiomaActual,
-            idioma_nuevo: nuevoIdioma,
-            tiempo_en_idioma: segundos
-        });
-    }
+    const segundos = Math.max(0, Math.round((tiempoFin - tiempoInicio) / 1000));
 
     // Recalcula años de experiencia para incrustarlos en el texto traducido.
     const yearsExperience = new Date().getFullYear() - 2015;
@@ -52,9 +45,18 @@ function cambiarIdioma(nuevoIdioma) {
         heroDescription.textContent = textos[nuevoIdioma].description(yearsExperience);
     }
 
-    // Actualiza estado para el próximo cambio de idioma.
+    // Reinicia el cronómetro inmediatamente para que el siguiente cambio cuente desde cero.
     idiomaActual = nuevoIdioma;
     tiempoInicio = Date.now();
+
+    // Envía evento personalizado a Google Analytics 4 si gtag está disponible.
+    if (typeof gtag !== 'undefined') {
+        gtag('event', 'cambio_de_idioma', {
+            idioma_anterior: idiomaAnterior,
+            idioma_nuevo: nuevoIdioma,
+            tiempo_en_idioma: segundos
+        });
+    }
 }
 
 // Gestiona interacciones generales del layout: menu, fechas, tema y botón "volver arriba".
